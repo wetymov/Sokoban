@@ -17,6 +17,7 @@ int main()
 		if (n == 's') Soko.move_down();
 		if (n == 'd') Soko.move_right();
 		if (n == 'a') Soko.move_left();
+		if (n == 'r') Soko.restart();
 		system("cls");
 	}
 	return 0;

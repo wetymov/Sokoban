@@ -10,15 +10,14 @@ using namespace std;
 class Sokoban {
 private:
 	vector<vector<string>> level;
+	vector<vector<string>> clear_level;
 	int level_size;
 public:
 	Sokoban(Level get_l) { // в конструктор получаем уровень
 		level = get_l.get_level();
 		level_size = level.size();
+		clear_level = level;
 	}
-
-
-
 
 
 	void print_Board() {
@@ -36,7 +35,7 @@ public:
 
 
 	*/
-	void move_up() {
+	void move_up() { // перемещение вверх с помощью замены координат y в отрицательную сторону
 		int x;
 		int y;
 		for (int i = 0; i < level_size; i++) {
@@ -50,14 +49,14 @@ public:
 		}
 		if (level[y - 1][x] != "#" && level[y - 1][x] != "O") swap(level[y][x],level[y-1][x]);
 		else if (level[y - 1][x] == "O") {
-			if (level[y - 2][x] != "O" && level[y - 1][x] != "#") {
+			if (level[y - 2][x] != "O" && level[y - 2][x] != "#") {
 				swap(level[y][x],level[y - 2][x]);
 				swap(level[y - 1][x], level[y - 2][x]);
 			}
 		}
 	}
 
-	void move_down() {
+	void move_down() { // перемещение вниз с помощью замены координат y в положительную сторону
 		int x;
 		int y;
 		for (int i = 0; i < level_size; i++) {
@@ -71,14 +70,14 @@ public:
 		}
 		if (level[y + 1][x] != "#" && level[y + 1][x] != "O") swap(level[y][x], level[y + 1][x]);
 		else if (level[y + 1][x] == "O") {
-			if (level[y + 2][x] != "O" && level[y + 1][x] != "#") {
+			if (level[y + 2][x] != "O" && level[y + 2][x] != "#") {
 				swap(level[y][x], level[y + 2][x]);
 				swap(level[y + 1][x], level[y + 2][x]);
 			}
 		}
 	}
 
-	void move_left() {
+	void move_left() { // перемещение влево с помощью замены координат x в отрицательную сторону
 		int x;
 		int y;
 		for (int i = 0; i < level_size; i++) {
@@ -99,7 +98,7 @@ public:
 		}
 	}
 
-	void move_right() {
+	void move_right() { // перемещение влево с помощью замены координат x в положительную сторону
 		int x;
 		int y;
 		for (int i = 0; i < level_size; i++) {
@@ -118,5 +117,9 @@ public:
 				swap(level[y][x + 1], level[y][x + 2]);
 			}
 		}
+	}
+
+	void restart() {
+		level = clear_level;
 	}
 };
