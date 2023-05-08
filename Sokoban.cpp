@@ -7,6 +7,7 @@ using namespace std;
 
 int main()
 {
+	system("chcp 1251");
 	Level m(1);
 	Sokoban Soko(m);
 	char n;
