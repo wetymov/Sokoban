@@ -1,6 +1,6 @@
 # Sokoban
 
-![GIF_SOKOBAN](https://github.com/wetymov/Sokoban/assets/Sokoban_ani.gif)
+![GIF_SOKOBAN](https://upload.wikimedia.org/wikipedia/commons/4/4b/Sokoban_ani.gif)
 
 больше о игре вы можете узнать на Википедии https://ru.wikipedia.org/wiki/Sokoban
 
