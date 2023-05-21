@@ -20,11 +20,23 @@ private:
 	vector<vector<string>> clear_level;
 	int level_size;
 	string flag = "@";
+	int score = 0;
 public:
 	Sokoban(Level get_l) { // в конструктор получаем уровень
 		level = get_l.get_level();
 		level_size = level.size();
 		clear_level = level;
+	}
+
+	void del_box_in_point() {
+		for (int i = 0; i < level.size(); i++) {
+			for (int j = 0; j <= level.size(); j++) {
+				if (level[i][j] == box_in_point) {
+					level[i][j] = " ";
+					score++;
+				}
+			}
+		}
 	}
 
 
@@ -35,6 +47,8 @@ public:
 			}
 			cout << "\n";
 		}
+		cout << "SCORE: " << score;
+		cout << "\n";
 	}
 	/*
 
@@ -69,6 +83,7 @@ public:
 				swap(level[y - 1][x], level[y - 2][x]);
 			}
 		}
+		del_box_in_point();
 	}
 
 	void move_down() { // перемещение вниз с помощью замены координат y в положительную сторону
@@ -96,6 +111,7 @@ public:
 				swap(level[y + 1][x], level[y + 2][x]);
 			}
 		}
+		del_box_in_point();
 	}
 
 	void move_left() { // перемещение влево с помощью замены координат x в отрицательную сторону
@@ -123,6 +139,7 @@ public:
 				swap(level[y][x - 1], level[y][x - 2]);
 			}
 		}
+		del_box_in_point();
 	}
 
 	void move_right() { // перемещение влево с помощью замены координат x в положительную сторону
@@ -153,10 +170,14 @@ public:
 				swap(level[y][x + 1], level[y][x + 2]);
 			}
 		}
+		del_box_in_point();
+	}
+
+	int get_score() {
+		return score;
 	}
 
 	void restart() {
 		level = clear_level;
-		flag = "@";
 	}
 };

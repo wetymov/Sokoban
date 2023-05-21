@@ -43,7 +43,7 @@ public:
 			level = level_1();
 		}
 	}
-	Level(string path) { // конструктор для кастомный уровней
+	Level(string path) { // конструктор для кастомных уровней
 		ifstream fin;
 		fin.open(path, ios_base::in);
 		if (fin.is_open()) {
