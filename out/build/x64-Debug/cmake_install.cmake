@@ -1,8 +1,8 @@
-# Install script for directory: C:/all_proggg/cpp/vs/Sokoban
+# Install script for directory: C:/Users/den-v/source/repos/Sokoban
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/all_proggg/cpp/vs/Sokoban/out/install/x64-Debug")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/den-v/Source/Repos/Sokoban/out/install/x64-debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/all_proggg/cpp/vs/Sokoban/out/build/x64-Debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/den-v/source/repos/Sokoban/out/build/x64-Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

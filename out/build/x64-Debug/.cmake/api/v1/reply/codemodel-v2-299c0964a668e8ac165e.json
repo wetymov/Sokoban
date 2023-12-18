@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Sokoban::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Sokoban-Debug-c5d17c249a4fad7ad7bc.json",
+					"jsonFile" : "target-Sokoban-Debug-782766e66119c78390b2.json",
 					"name" : "Sokoban",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/all_proggg/cpp/vs/Sokoban/out/build/x64-Debug",
-		"source" : "C:/all_proggg/cpp/vs/Sokoban"
+		"build" : "C:/Users/den-v/source/repos/Sokoban/out/build/x64-Debug",
+		"source" : "C:/Users/den-v/source/repos/Sokoban"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 4
+		"minor" : 5
 	}
 }

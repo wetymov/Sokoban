@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "Convert_txt_to_level.h"
+#include "LevelGenerator.h"
 
 #define player "@" // игрок
 #define player_in_point "!" // игрок находящийся на ячейке для ящика
@@ -179,5 +179,7 @@ public:
 
 	void restart() {
 		level = clear_level;
+		score = 0;
 	}
 };
+ 
